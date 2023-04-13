@@ -1,0 +1,37 @@
+﻿@model ToDoApplication.Models.ToDo
+
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+
+
+*@
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>To Do</h4>
+<hr />
+
+<form asp-action="Create" method="post">
+
+            <label class="form-label">Task</label>
+            <input type="text" placeholder="Enter task" asp-for="Title">
+           
+            <label class="form-check-label" for="exampleCheck1">
+                <input type="checkbox" class="form-check-input" id="exampleCheck" asp-for="IsComplete">
+
+                The task is complete
+            </label>
+        
+                <input type="submit" value="Create"/>
+           
+        </form>
+ 
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+

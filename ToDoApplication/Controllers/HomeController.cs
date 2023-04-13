@@ -35,10 +35,32 @@ public class HomeController : Controller
         return View();
     }
 
+    
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()
     {
         return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+    }
+
+
+    public IActionResult Create()
+    {
+        return View();
+    }
+
+    //binding the data
+    //posts the data to the database ToDos table
+    [HttpPost]
+    [ValidateAntiForgeryToken]
+    public async Task<IActionResult> Create([Bind("Title, IsComplete, CompletionDate")] ToDo toDo)
+    {
+        if (ModelState.IsValid)
+        {
+            _todoContext.Add(toDo);
+            await _todoContext.SaveChangesAsync();
+            return RedirectToAction(nameof(Index));
+        }
+        return View(toDo);
     }
 }
 
