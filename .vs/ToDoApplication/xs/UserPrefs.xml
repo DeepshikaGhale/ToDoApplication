@@ -1,11 +1,14 @@
 ﻿<Properties StartupConfiguration="{45C60ECB-B498-4B51-8E0A-A5D2AA5F0151}|Default">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="ToDoApplication/Models/ToDo.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="ToDoApplication/Program.cs">
     <Files>
-      <File FileName="ToDoApplication/Models/todo.cs" Line="11" Column="22" />
+      <File FileName="ToDoApplication/Models/todo.cs" />
       <File FileName="ToDoApplication/Controllers/HomeController.cs" />
       <File FileName="ToDoApplication/Models/ErrorViewModel.cs" />
       <File FileName="ToDoApplication/Data/ToDoContext.cs" />
+      <File FileName="ToDoApplication/appsettings.Development.json" Line="1" Column="1" />
+      <File FileName="ToDoApplication/Program.cs" Line="20" Column="1" />
+      <File FileName="ToDoApplication/appsettings.json" Line="8" Column="22" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -13,7 +16,9 @@
           <Node name="ToDoApplication" expanded="True">
             <Node name="ToDoApplication" expanded="True">
               <Node name="Data" expanded="True" />
+              <Node name="Migrations" expanded="True" />
               <Node name="Models" expanded="True" />
+              <Node name="appsettings.json" expanded="True" selected="True" />
             </Node>
           </Node>
         </State>

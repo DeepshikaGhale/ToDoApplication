@@ -1,4 +1,7 @@
-﻿namespace ToDoApplication;
+﻿using Microsoft.EntityFrameworkCore;
+using ToDoApplication.Data;
+
+namespace ToDoApplication;
 
 public class Program
 {
@@ -8,6 +11,13 @@ public class Program
 
         // Add services to the container.
         builder.Services.AddControllersWithViews();
+
+        //using SQLlite to create database in local
+        builder.Services.AddDbContext<ToDoContext>(options =>
+        {
+            options.UseSqlite(@"Data Source=/Users/deepshikaghale/mytododb.db;");
+        });
+
 
         var app = builder.Build();
 
