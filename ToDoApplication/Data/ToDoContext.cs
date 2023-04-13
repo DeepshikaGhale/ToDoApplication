@@ -14,8 +14,17 @@ namespace ToDoApplication.Data
 
         }
         //creates a table caleed Blogs
-        public DbSet<ToDo> Blogs => Set<ToDo>();
+        public DbSet<ToDo> ToDos => Set<ToDo>();
 
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            // Add data to table with Todo model.
+            modelBuilder.Entity<ToDo>().HasData(new ToDo {Title = "Prepare Breakfast", IsComplete = true });
+            modelBuilder.Entity<ToDo>().HasData(new ToDo {Title = "Eat", IsComplete = false });
+            modelBuilder.Entity<ToDo>().HasData(new ToDo {Title = "Clean Room", IsComplete = false });
+            modelBuilder.Entity<ToDo>().HasData(new ToDo {Title = "Do Laundry", IsComplete = false });
+
+        }
     }
 }
 
