@@ -1,16 +1,20 @@
 ﻿<Properties StartupConfiguration="{45C60ECB-B498-4B51-8E0A-A5D2AA5F0151}|Default">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="ToDoApplication/Models/ErrorViewModel.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="ToDoApplication/Models/ToDo.cs">
     <Files>
-      <File FileName="ToDoApplication/Models/todo.cs" />
+      <File FileName="ToDoApplication/Models/todo.cs" Line="11" Column="22" />
       <File FileName="ToDoApplication/Controllers/HomeController.cs" />
-      <File FileName="ToDoApplication/Models/ErrorViewModel.cs" Line="10" Column="1" />
+      <File FileName="ToDoApplication/Models/ErrorViewModel.cs" />
+      <File FileName="ToDoApplication/Data/ToDoContext.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="ToDoApplication" expanded="True">
-            <Node name="ToDoApplication" expanded="True" />
+            <Node name="ToDoApplication" expanded="True">
+              <Node name="Data" expanded="True" />
+              <Node name="Models" expanded="True" />
+            </Node>
           </Node>
         </State>
       </Pad>
