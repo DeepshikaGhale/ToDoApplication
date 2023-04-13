@@ -1,4 +1,26 @@
 ﻿<Properties StartupConfiguration="{45C60ECB-B498-4B51-8E0A-A5D2AA5F0151}|Default">
-  <MonoDevelop.Ide.ItemProperties.ToDoApplication FirstBuild="True" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workbench ActiveDocument="ToDoApplication/Models/todo.cs">
+    <Files>
+      <File FileName="ToDoApplication/Models/todo.cs" Line="16" Column="48" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="ToDoApplication" expanded="True">
+            <Node name="ToDoApplication" expanded="True">
+              <Node name="Controllers" expanded="True" />
+              <Node name="Models" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.ToDoApplication PreferredExecutionTarget="/Applications/Safari.app" FirstBuild="True" />
   <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
 </Properties>
