@@ -23,7 +23,6 @@ namespace ToDoApplication.Data
             modelBuilder.Entity<ToDo>().HasData(new ToDo {Title = "Eat", IsComplete = false });
             modelBuilder.Entity<ToDo>().HasData(new ToDo {Title = "Clean Room", IsComplete = false });
             modelBuilder.Entity<ToDo>().HasData(new ToDo {Title = "Do Laundry", IsComplete = false });
-
         }
     }
 }

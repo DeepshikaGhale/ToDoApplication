@@ -1,9 +1,47 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
+    List<ToDo>todos = ViewBag.Todos;
+    var no = "No";
 }
 
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Task
+            </th>
+          
+            <th>
+                IsComplete
+            </th>
+           
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (ToDo item in todos)
+            {
+                
+    <tr>
+        <td>
+            @item.Title
+        </td>
+        
+        <td>
+            @if (@item.IsComplete == false)
+            {
+                @no
+            }
+        </td>
+       
+    </tr>
+    
+
+    }
+</tbody>
+</table>
 
