@@ -10,18 +10,7 @@
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="ToDoApplication" expanded="True">
-            <Node name="ToDoApplication" expanded="True">
-              <Node name="Dependencies" expanded="True">
-                <Node name="PackageDependencies" expanded="True">
-                  <Node name="Microsoft.EntityFrameworkCore.SqlServer" selected="True" />
-                </Node>
-              </Node>
-              <Node name="Controllers" expanded="True" />
-              <Node name="Models" expanded="True" />
-              <Node name="Views" expanded="True">
-                <Node name="Home" expanded="True" />
-              </Node>
-            </Node>
+            <Node name="ToDoApplication" expanded="True" />
           </Node>
         </State>
       </Pad>
