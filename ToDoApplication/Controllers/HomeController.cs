@@ -42,13 +42,9 @@ public class HomeController : Controller
         return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
     }
 
-
-    public IActionResult Create()
-    {
-        return View();
-    }
-
     //create action to update the todo status
+    [HttpPost]
+    [ValidateAntiForgeryToken]
     public async Task<IActionResult> Update_Status(int? Id)
     {
         var toDo = await _todoContext.ToDos.FindAsync(Id);
@@ -71,7 +67,6 @@ public class HomeController : Controller
     [ValidateAntiForgeryToken]
     public async Task<IActionResult> Create([Bind("Title, IsComplete, CompletionDate")] ToDo toDo)
     {
-        
         if (ModelState.IsValid)
         {
             //setting the value of the completion date programmatically
@@ -86,7 +81,7 @@ public class HomeController : Controller
             await _todoContext.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
-        return View(toDo);
+        return RedirectToAction(nameof(Index), toDo);
     }
 }
 
