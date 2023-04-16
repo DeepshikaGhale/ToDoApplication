@@ -24,7 +24,7 @@ public class HomeController : Controller
     {
         // get data from the todos table and
         //passes the records where the task is incomplete
-        List<ToDo> todos = _todoContext.ToDos.Where(c => c.IsComplete == false).ToList();
+        List<ToDo> todos = _todoContext.ToDos.ToList();
         //pass the filtered list
         ViewBag.Todos = todos;
         return View();
@@ -48,14 +48,40 @@ public class HomeController : Controller
         return View();
     }
 
+    //create action to update the todo status
+    public async Task<IActionResult> Update_Status(int? Id)
+    {
+        var toDo = await _todoContext.ToDos.FindAsync(Id);
+        if (toDo == null)
+        {
+            return NotFound();
+        }
+        toDo.IsComplete = true;
+        toDo.CompletionDate = DateTime.Now;
+        _todoContext.Update(toDo);
+
+        await _todoContext.SaveChangesAsync();
+
+        return RedirectToAction(nameof(Index));
+    }
+
     //binding the data
     //posts the data to the database ToDos table
     [HttpPost]
     [ValidateAntiForgeryToken]
     public async Task<IActionResult> Create([Bind("Title, IsComplete, CompletionDate")] ToDo toDo)
     {
+        
         if (ModelState.IsValid)
         {
+            //setting the value of the completion date programmatically
+            if(toDo.IsComplete == true)
+            {
+                toDo.CompletionDate = DateTime.Now;
+                _todoContext.Add(toDo);
+                await _todoContext.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
+            }
             _todoContext.Add(toDo);
             await _todoContext.SaveChangesAsync();
             return RedirectToAction(nameof(Index));

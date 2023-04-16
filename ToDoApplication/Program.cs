@@ -15,7 +15,7 @@ public class Program
         //using SQLlite to create database in local
         builder.Services.AddDbContext<ToDoContext>(options =>
         {
-            options.UseSqlite("Data Source=/Users/deepshikaghale/Data/mydb.db;");
+            options.UseSqlite("Data Source=/Users/deepshikaghale/Data/myToDodb.db;");
         });
 
 

@@ -1,7 +1,11 @@
-﻿@{
+﻿@model ToDoApplication.Models.ToDo
+
+
+@{
     ViewData["Title"] = "Home Page";
-    List<ToDo>todos = ViewBag.Todos;
+    List<ToDo> todos = ViewBag.Todos;
     var no = "No";
+    var yes = "Yes";
 }
 
 
@@ -18,33 +22,61 @@
             <th>
                 Task
             </th>
-          
+
             <th>
                 IsComplete
             </th>
-           
+            <th>
+               CompletionDate
+            </th>
+            <th>
+                Complete Task
+            </th>
+
         </tr>
     </thead>
     <tbody>
         @foreach (ToDo item in todos)
-            {
-                
-    <tr>
-        <td>
-            @item.Title
-        </td>
-        
-        <td>
-            @if (@item.IsComplete == false)
-            {
-                @no
-            }
-        </td>
-       
-    </tr>
-    
+        {
 
-    }
-</tbody>
+            <tr>
+                <td>
+                    @item.Title
+                </td>
+                <td>
+                    @if (@item.IsComplete == false)
+                    {
+                        @no
+                    }
+                    else
+                    {
+                        @yes
+                    }
+
+                </td>
+                <td>
+                    @item.CompletionDate
+                </td>
+                <td>
+                    @if (@item.IsComplete == false)
+                    {
+                        <form asp-action="Update_Status" asp-route-id="@item.ID">
+                            <input type="checkbox" name="taskStatus" class="form-check-input" id="exampleCheck" asp-for="IsComplete" onclick="this.form.submit()" />
+                            <label class="form-check-label" for="exampleCheck1">
+                                The task is complete
+                            </label>
+                        </form>
+                    }
+                    else
+                    {
+                        <label>Done</label>
+                    }
+
+
+                </td>
+
+            </tr>
+        }
+    </tbody>
 </table>
 
