@@ -22,13 +22,13 @@
                 <label>The task is complete</label>
             </div>
             <div class="col-auto">
-                <input type="submit" value="Create" class="btn btn-primary mb-3" />
+                <input type="submit" value="Create" class="btn btn-primary mb-2" />
             </div>
         </form>
     </div>
 </div>
 
-<h1 class="d-flex display-5 justify-content-center" >To Do List</h1>
+<h1 class="d-flex display-5 justify-content-center">To Do List</h1>
 
 <table class="table">
     <thead>
@@ -60,11 +60,11 @@
                 <td>
                     @if (@item.IsComplete == false)
                     {
-                       <span class="text-danger">No</span>
+                        <span class="text-danger">No</span>
                     }
                     else
                     {
-                 <span class="text-success">Yes</span>
+                        <span class="text-success">Yes</span>
                     }
 
                 </td>
@@ -91,4 +91,11 @@
         }
     </tbody>
 </table>
+
+@*runs built-in script for form validation*@
+
+@section Scripts
+{
+    <partial name="_ValidationScriptsPartial" />
+}
 

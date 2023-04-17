@@ -1,25 +1,14 @@
 ﻿<Properties StartupConfiguration="{45C60ECB-B498-4B51-8E0A-A5D2AA5F0151}|Default">
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workbench ActiveDocument="ToDoApplication/Program.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="ToDoApplication/Views/Shared/_Layout.cshtml">
     <Files>
-      <File FileName="ToDoApplication/Models/todo.cs" Line="5" Column="15" />
-      <File FileName="ToDoApplication/Data/ToDoContext.cs" Line="14" Column="1" />
-      <File FileName="ToDoApplication/Program.cs" Line="46" Column="1" />
-      <File FileName="ToDoApplication/Controllers/HomeController.cs" Line="27" Column="15" />
-      <File FileName="ToDoApplication/Views/Home/Index.cshtml" Line="10" Column="1" />
-      <File FileName="ToDoApplication/Views/Home/Create.cshtml" Line="27" Column="8" />
-      <File FileName="ToDoApplication/Views/Home/Privacy.cshtml" Line="1" Column="1" />
-      <File FileName="ToDoApplication/Views/Shared/_Layout.cshtml" Line="20" Column="62" />
-      <File FileName="ToDoApplication/Models/ErrorViewModel.cs" Line="10" Column="1" />
-      <File FileName="ToDoApplication/Views/_ViewImports.cshtml" Line="1" Column="1" />
-      <File FileName="ToDoApplication/appsettings.json" Line="1" Column="1" />
-      <File FileName="ToDoApplication/appsettings.Development.json" Line="1" Column="1" />
-      <File FileName="ToDoApplication/Migrations/ToDoContextModelSnapshot.cs" Line="1" Column="1" />
+      <File FileName="ToDoApplication/Models/todo.cs" />
+      <File FileName="ToDoApplication/Data/ToDoContext.cs" />
+      <File FileName="ToDoApplication/Controllers/HomeController.cs" Line="73" Column="20" />
+      <File FileName="ToDoApplication/Models/ErrorViewModel.cs" Line="1" Column="1" />
+      <File FileName="ToDoApplication/Views/Shared/_ValidationScriptsPartial.cshtml" Line="2" Column="33" />
+      <File FileName="ToDoApplication/Views/Home/Index.cshtml" Line="95" Column="17" />
+      <File FileName="ToDoApplication/Views/Shared/_Layout.cshtml" Line="51" Column="1" />
+      <File FileName="ToDoApplication/Views/Home/Privacy.cshtml" Line="8" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -28,20 +17,26 @@
             <Node name="ToDoApplication" expanded="True">
               <Node name="Controllers" expanded="True" />
               <Node name="Data" expanded="True" />
-              <Node name="Migrations" expanded="True" />
               <Node name="Models" expanded="True" />
+              <Node name="Properties" expanded="True" />
               <Node name="Views" expanded="True">
-                <Node name="Home" expanded="True" />
+                <Node name="Home" expanded="True">
+                  <Node name="Privacy.cshtml" selected="True" />
+                </Node>
+                <Node name="Shared" expanded="True" />
               </Node>
               <Node name="appsettings.json" expanded="True" />
             </Node>
           </Node>
         </State>
       </Pad>
-      <Pad Id="MonoDevelop.Debugger.WatchPad">
-        <State />
-      </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.ItemProperties.ToDoApplication PreferredExecutionTarget="/Applications/Safari.app" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
 </Properties>
